@@ -1,0 +1,13 @@
+@charset "utf-8";
+
+#id_container {
+    /*display: flex;*/
+    background-color: #fff;
+}
+#tela_inicial {
+    color: blue;
+    /*float: left;*/
+}
+h2 {
+    text-align: center;
+}

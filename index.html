@@ -1,0 +1,200 @@
+<!--TAG inicial de cada HTML que indica o documento como uma página HTML5-->
+<!DOCTYPE html>
+<!--TAG html descrevendo o idioma que será aplicado minha página-->
+<html lang="pt-br">
+<head>
+    <!--TAGs padrões do HTML5-->
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <!--Título da página-->
+    <title>Manutenção de Motocicletas</title>
+    <!--Link para uso do Bootstrap 4-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"/>
+    <!--Link para CSS-->
+    <link rel="stylesheet" href="index.css"/>
+</head>
+<body>
+<!--Div para formatar o doc em um container com Bootstrap responsivo-->
+<div class="container" id="id_container">
+    <!--Formulário de Cadastro de Manutenção de Motocicletas-->
+    <form action="index.php" method="POST" id="id_form">
+        <!--Título do formulário-->
+        <h2>Cadastro para Manutenção de Motocicleta</h2>
+        <div class="d-flex justify-content-center">
+            <section id="tela_inicial" class="p-2 flex-grow-2 bd-highlight">
+                <!--Campo para informar seu nome-->
+                <div class="form-group">
+                    <label for="id_nome">Nome</label>
+                    <input type="text" class="form-control" id="id_nome" name="nome" autofocus/>
+                </div>
+                <!--Campo para informar seu sobrenome-->
+                <div class="form-group">
+                    <label for="id_sobrenome">Sobrenome</label>
+                    <input type="text" class="form-control" id="id_sobrenome" name="sobrenome"/>
+                </div>
+                <!--Campo para selecionar o seu sexo-->
+                <div class="form-row">
+                    <div class="col">
+                        <p>Sexo</p>
+                    </div>
+                    <div class="form-group">
+                        <div class="form-check form-check-inline">
+                            <input type="radio" class="form-check-input" name="sexo" value="masculino" id="id_masculino" checked/>
+                            <label class="form-check-label" for="id_masculino">Masculino</label>
+                        </div>
+        
+                        <div class="form-check form-check-inline">
+                            <input type="radio"class="form-check-input" name="sexo" value="feminino" id="id_feminino"/>
+                            <label class="form-check-label" for="id_feminino">Feminino</label>
+                        </div>
+
+                        <div class="form-check form-check-inline">
+                            <input type="radio"class="form-check-input" name="sexo" value="nao declarado" id="id_naoDeclarado"/>
+                            <label class="form-check-label" for="id_naoDeclarado">Não Declarado</label>
+                        </div>
+                    </div>
+                </div>
+                <!--Campo para informar seu CPF-->
+                <div class="form-group">
+                    <label for="id_cpf" class="control-label">CPF</label>                   
+                    <input type="text" class="form-control" id="id_cpf" name="cpf" maxlength="15"/>
+                </div>
+                <!--Campo para informar seu email-->
+                <div class="form-group">
+                    <label for="id_email">Email</label>
+                    <input type="email" class="form-control" id="id_email" name="email" aria-describedby="emailHelp"/>
+                    <small id="emailHelp" class="form-text text-muted">Nunca compartilharemos seu email com mais ninguém.</small>
+                </div>
+                <!--Campo para informar o seu telefone-->
+                <div class="form-group">
+                    <label for="id_telefone" class="control-label">Telefone</label>
+                    <input type="text" class="form-control" id="id_telefone" name="telefone" pattern="\([0-9]{2}\)[0-9]{4,6}-[0-9]{3,4}$"/>
+                </div>
+                <!--Campo para selecionar qual é o "Estado" do Usuário-->
+                <div class="form-row">
+                    <div class="col">
+                        <label for="idEstado">Estado</label>
+                    </div>
+                    <div class="col mr-5">
+                        <select id="id_estado" name="estado">
+                            <optgroup label="Região Centro-Oeste">
+                                <option value="DF">Distrito Federal</option>
+                                <option value="GO">Goiás</option>
+                                <option value="MT">Mato Grosso</option>
+                                <option value="MS">Mato Grosso do Sul</option>
+                            </optgroup>
+                            <optgroup label="Região Nordeste">
+                                <option value="AL">Alagoas</option>
+                                <option value="BA">Bahia</option>
+                                <option value="CE">Ceará</option>
+                                <option value="MA">Maranhão</option>
+                                <option value="PB">Paraíba</option>
+                                <option value="PE">Pernambuco</option>
+                                <option value="PI">Piauí</option>
+                                <option value="RN">Rio Grande do Norte</option>
+                                <option value="SE">Sergipe</option>
+                            </optgroup>
+                            <optgroup label="Região Norte">
+                                <option value="AC">Acre</option>
+                                <option value="AP">Amapá</option>
+                                <option value="AM">Amazonas</option>
+                                <option value="PA">Pará</option>
+                                <option value="RO">Rondônia</option>
+                                <option value="RR">Roraima</option>
+                                <option value="TT">Tocantins</option>
+                            </optgroup>
+                            <optgroup label="Região Sudeste">
+                                <option value="ES">Espírito Santo</option>
+                                <option value="MG">Minas Gerais</option>
+                                <option value="RJ" selected>Rio de Janeiro</option>
+                                <option value="SP">São Paulo</option>
+                            </optgroup>
+                            <optgroup label="Região Sul">
+                                <option value="PR">Paraná</option>
+                                <option value="RS">Rio Grande do Sul</option>
+                                <option value="SC">Santa Catarina</option>
+                            </optgroup>
+                        </select>
+                    </div>
+                </div>
+                <!--Campo para informar sua cidade-->
+                <div class="form-group">
+                    <label for="id_cidade">Cidade</label>
+                    <input type="text" class="form-control" id="id_cidade" name="cidade"/>
+                </div>
+                <!--Campo para informar o título do seu problema referente a motocicleta-->
+                <div class="form-group">
+                    <label for="id_titulo">Título do problema</label>
+                    <input type="text" class="form-control" id="id_titulo" name="titulo"/>
+                </div>
+                <!--Campo de seleção única para o Usuário indicar qual o grau de urgência do seu problema-->
+                <div class="form-group">
+                    <p>Grau de Urgência</p>              
+                </div>
+                <div class="form-row ml-5">
+                    <div class="form-group">
+                        <div class="form-check form-check-inline">
+                            <input type="radio" class="form-check-input" name="urgencia" value="minimo" id="id_minimo" checked/>
+                            <label class="form-check-label" for="id_minimo">Mínimo</label>
+                        </div>
+
+                        <div class="form-check form-check-inline">
+                            <input type="radio" class="form-check-input" name="urgencia" value="intermediario" id="id_intermediario" checked/>
+                            <label class="form-check-label" for="id_intermediario">Intermediário</label>
+                        </div>
+        
+                        <div class="form-check form-check-inline">
+                            <input type="radio"class="form-check-input" name="urgencia" value="maximo" id="id_maximo"/>
+                            <label class="form-check-label" for="id_maximo">Máximo</label>
+                        </div>
+                    </div>
+                </div>
+                <!--Campo para o usuário descrever o problema pelo qual está passando referente a uma motocicleta-->
+                <div class="form-group">
+                    <p>Descrição do problema</p>              
+                </div>
+                <div class="form-group">
+                    <textarea class="form" id="id_descricao" name="descricao" rows="4" cols="50"></textarea>
+                </div>
+                <!--Campo para o Usuário digitar sua senha-->
+                <div class="form-group">
+                    <label for="id_senha">Senha</label>
+                    <input type="password" class="form-control" id="id_senha" name="senha" required/>
+                </div>
+                <!--Checkbox "Clique em mim" para setar um campo de teste para salvar automaticamente futuramente um "lembrar de mim" no login-->
+                <div class="form-group form-check">
+                    <input type="checkbox" class="form-check-input" id="id_check" name="check"/>
+                    <label class="form-check-label" for="id_check">Clique em mim</label>
+                </div>
+                <!--Div para agrupar todos os botões do formulário e setar seu estilo-->
+                <div id="id_buttons" class="mx-auto" style="width: 200px;">
+                    <!--Botão para apagar/resetar todas as informações digitas no formulário-->
+                    <button type="reset" class="btn btn-primary" id="id_apagar" name="apagar">Apagar</button>
+                    <!--Botão para salvar os dados do formulário-->
+                    <button type="submit" onclick="salvarCadastro()" class="btn btn-primary" id="id_salvar" name="salvar">Salvar</button>
+                </div>
+            </section>
+        </div>
+    </form>
+</div>
+<!--Requisitos para scripts e tools com js, jquery e bootstrap-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.2/jquery.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.1/js/bootstrap.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.5/validator.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.1/css/bootstrap.min.css"/>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css"/>
+<!--Scripts com Javascript e Jquery-->
+<script>
+//Validar máscara no formulário nos inputs "cpf" e "telefone"
+$('#id_form').validator();
+$('#id_cpf').mask("999.999.999-99");
+$('#id_telefone').mask("(99)99999-9999");
+//Função para alerta de "Cadastro feito" após de completar e salvar cadastro no formulário
+function salvarCadastro() {
+    alert("Cadastro feito");
+}
+</script>
+</body>
+</html>
