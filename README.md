@@ -15,7 +15,7 @@ This project was developed with the following technologies:
 
 # 🤔 How to contribute?
 ```bash
-# Make a Fork this repository;
+# Make a Fork this repository.
 # Create a branch with your feature: 
 git checkout -b my-feature;
 # Make commit to your changes: 
