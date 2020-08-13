@@ -5,13 +5,13 @@
 ## 🚀 Stacks
 This project was developed with the following technologies:
 
-- HTML5
-- CSS3
-- Javascript
-- PHP
-- jQuery
-- Bootstrap
-- MySQL
+- [HTML5](https://developer.mozilla.org/pt-BR/docs/Web/HTML/HTML5)
+- [CSS3](https://developer.mozilla.org/pt-BR/docs/Archive/CSS3)
+- [Javascript](https://www.javascript.com/learn/strings)
+- [PHP](https://www.php.net/manual/en/intro-whatis.php)
+- [jQuery](https://api.jquery.com/)
+- [Bootstrap](https://getbootstrap.com/docs/4.5/getting-started/introduction/)
+- [MySQL](https://dev.mysql.com/doc/)
 
 # 🤔 How to contribute?
 ```bash
@@ -29,7 +29,7 @@ After the merge of your pull request is done, you can delete a branch of yours.
 Feel free to **file a new issue** with a respective title and description on the the [Proffy](https://github.com/JardelDeveloper/proffy-nlw-rocketseat/issues) repository. If you already found a solution to your problem, **I would love to review your pull request**.
 
 # :memo: License
-Released in 2020 closed_book
+Released in 2020 :closed_book:
 
 This project is under the MIT license. See the [LICENSE](LICENSE.md) for more details.
 
