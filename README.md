@@ -1,6 +1,6 @@
 # Web Form #
 
-> :computer: Web Form requesting the database in the Web Development course at [University of Cândido Mendes - UCAM](https://www.candidomendes.edu.br/)
+> :computer: Web Form requesting the database in the Web Development course at [University of Candido Mendes - UCAM](https://www.candidomendes.edu.br/)
 
 ## 🚀 Stacks
 This project was developed with the following technologies:
